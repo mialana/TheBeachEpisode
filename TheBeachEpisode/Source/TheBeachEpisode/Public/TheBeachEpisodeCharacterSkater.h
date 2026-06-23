@@ -6,7 +6,7 @@
 #include "TheBeachEpisodeCharacter.h"
 #include "TheBeachEpisodeCharacterSkater.generated.h"
 
-class UStaticMeshComponent;
+class USkeletalMeshComponent;
 
 /**
  * 
@@ -18,7 +18,7 @@ class THEBEACHEPISODE_API ATheBeachEpisodeCharacterSkater : public ATheBeachEpis
     GENERATED_BODY()
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-    UStaticMeshComponent* EquipmentMesh;
+    USkeletalMeshComponent* EquipmentMesh;
 
 public:
     ATheBeachEpisodeCharacterSkater();

@@ -2,12 +2,12 @@
 
 #include "TheBeachEpisodeCharacterSkater.h"
 
-#include "Components/StaticMeshComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 ATheBeachEpisodeCharacterSkater::ATheBeachEpisodeCharacterSkater()
 {
     // Create the equipment mesh
-    EquipmentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("EquipmentMesh"));
+    EquipmentMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("EquipmentMesh"));
     EquipmentMesh->SetupAttachment(RootComponent);
 }
 
