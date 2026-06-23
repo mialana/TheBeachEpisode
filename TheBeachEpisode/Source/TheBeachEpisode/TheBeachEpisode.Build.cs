@@ -8,7 +8,8 @@ public class TheBeachEpisode : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] {
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
 			"Core",
 			"CoreUObject",
 			"Engine",
@@ -23,8 +24,10 @@ public class TheBeachEpisode : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
-		PublicIncludePaths.AddRange(new string[] {
+		PublicIncludePaths.AddRange(new string[]
+		{
 			"TheBeachEpisode",
+			"TheBeachEpisode/Public",
 			"TheBeachEpisode/Variant_Platforming",
 			"TheBeachEpisode/Variant_Platforming/Animation",
 			"TheBeachEpisode/Variant_Combat",

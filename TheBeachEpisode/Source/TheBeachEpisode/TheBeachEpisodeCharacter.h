@@ -9,7 +9,6 @@
 
 class USpringArmComponent;
 class UCameraComponent;
-class UStaticMeshComponent;
 class UInputAction;
 struct FInputActionValue;
 
@@ -32,9 +31,6 @@ class ATheBeachEpisodeCharacter : public ACharacter
     /** Follow camera */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
     UCameraComponent* FollowCamera;
-
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-    UStaticMeshComponent* EquipmentMesh;
 
 protected:
     /** Jump Input Action */

@@ -4,7 +4,6 @@
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Controller.h"
@@ -46,10 +45,6 @@ ATheBeachEpisodeCharacter::ATheBeachEpisodeCharacter()
     FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
     FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
     FollowCamera->bUsePawnControlRotation = false;
-
-    // Create the equipment mesh
-    EquipmentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("EquipmentMesh"));
-    EquipmentMesh->SetupAttachment(RootComponent);
 
     // Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character)
     // are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
@@ -107,8 +102,8 @@ void ATheBeachEpisodeCharacter::DoMove(float Right, float Forward)
         const FRotator Rotation = GetController()->GetControlRotation();
         const FRotator YawRotation(0, Rotation.Yaw, 0);
 
-        // get forward vector of equipment
-        const FVector ForwardDirection = EquipmentMesh->GetForwardVector();
+        // get forward vector
+        const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 
         // get right vector
         const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
