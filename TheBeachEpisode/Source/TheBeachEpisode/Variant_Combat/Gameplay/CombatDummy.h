@@ -14,50 +14,50 @@ class UPhysicsConstraintComponent;
  *  A simple invincible combat training dummy
  */
 UCLASS(abstract)
+
 class ACombatDummy : public AActor, public ICombatDamageable
 {
-	GENERATED_BODY()
-	
-	/** Root component */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent* Root;
+    GENERATED_BODY()
 
-	/** Static base plate */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* BasePlate;
+    /** Root component */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    USceneComponent* Root;
 
-	/** Physics enabled dummy mesh */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* Dummy;
+    /** Static base plate */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UStaticMeshComponent* BasePlate;
 
-	/** Physics constraint holding the dummy and base plate together */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UPhysicsConstraintComponent* PhysicsConstraint;
+    /** Physics enabled dummy mesh */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UStaticMeshComponent* Dummy;
 
-public:	
-	
-	/** Constructor */
-	ACombatDummy();
+    /** Physics constraint holding the dummy and base plate together */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UPhysicsConstraintComponent* PhysicsConstraint;
 
-	// ~Begin CombatDamageable interface
+public:
+    /** Constructor */
+    ACombatDummy();
 
-		/** Handles damage and knockback events */
-	virtual void ApplyDamage(float Damage, AActor* DamageCauser, const FVector& DamageLocation, const FVector& DamageImpulse) override;
+    // ~Begin CombatDamageable interface
 
-	/** Handles death events */
-	virtual void HandleDeath() override;
+    /** Handles damage and knockback events */
+    virtual void ApplyDamage(float Damage, AActor* DamageCauser, const FVector& DamageLocation,
+                             const FVector& DamageImpulse) override;
 
-	/** Handles healing events */
-	virtual void ApplyHealing(float Healing, AActor* Healer) override;
+    /** Handles death events */
+    virtual void HandleDeath() override;
 
-	/** Allows reaction to incoming attacks */
-	virtual void NotifyDanger(const FVector& DangerLocation, AActor* DangerSource) override;
+    /** Handles healing events */
+    virtual void ApplyHealing(float Healing, AActor* Healer) override;
 
-	// ~End CombatDamageable interface
+    /** Allows reaction to incoming attacks */
+    virtual void NotifyDanger(const FVector& DangerLocation, AActor* DangerSource) override;
+
+    // ~End CombatDamageable interface
 
 protected:
-
-	/** Blueprint handle to apply damage effects */
-	UFUNCTION(BlueprintImplementableEvent, Category="Combat", meta = (DisplayName = "On Dummy Damaged"))
-	void BP_OnDummyDamaged(const FVector& Location, const FVector& Direction);
+    /** Blueprint handle to apply damage effects */
+    UFUNCTION(BlueprintImplementableEvent, Category = "Combat", meta = (DisplayName = "On Dummy Damaged"))
+    void BP_OnDummyDamaged(const FVector& Location, const FVector& Direction);
 };

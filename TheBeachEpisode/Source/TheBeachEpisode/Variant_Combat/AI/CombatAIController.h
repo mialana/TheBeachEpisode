@@ -12,21 +12,20 @@ class UStateTreeAIComponent;
  *	A basic AI Controller capable of running StateTree
  */
 UCLASS(abstract)
+
 class ACombatAIController : public AAIController
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	/** StateTree Component */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStateTreeAIComponent* StateTreeAI;
+    /** StateTree Component */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UStateTreeAIComponent* StateTreeAI;
 
 public:
-
-	/** Constructor */
-	ACombatAIController();
+    /** Constructor */
+    ACombatAIController();
 
 protected:
-
-	/** Pawn Initialization */
-	virtual void OnPossess(APawn* InPawn) override;
+    /** Pawn Initialization */
+    virtual void OnPossess(APawn* InPawn) override;
 };

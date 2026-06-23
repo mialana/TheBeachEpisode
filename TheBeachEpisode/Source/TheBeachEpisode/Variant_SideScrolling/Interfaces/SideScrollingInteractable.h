@@ -10,9 +10,10 @@
  *  
  */
 UINTERFACE(MinimalAPI, NotBlueprintable)
+
 class USideScrollingInteractable : public UInterface
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 };
 
 /**
@@ -20,12 +21,10 @@ class USideScrollingInteractable : public UInterface
  */
 class ISideScrollingInteractable
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-
-	/** Triggers an interaction by the provided Actor */
-	UFUNCTION(BlueprintCallable, Category="Interactable")
-	virtual void Interaction(AActor* Interactor) = 0;
-
+    /** Triggers an interaction by the provided Actor */
+    UFUNCTION(BlueprintCallable, Category = "Interactable")
+    virtual void Interaction(AActor* Interactor) = 0;
 };

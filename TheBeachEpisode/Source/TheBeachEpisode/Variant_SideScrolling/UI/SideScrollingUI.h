@@ -11,13 +11,13 @@
  *  Displays and manages a pickup counter
  */
 UCLASS(abstract)
+
 class USideScrollingUI : public UUserWidget
 {
-	GENERATED_BODY()
-	
-public:
+    GENERATED_BODY()
 
-	/** Update the widget's pickup counter */
-	UFUNCTION(BlueprintImplementableEvent, Category="UI")
-	void UpdatePickups(int32 Amount);
+public:
+    /** Update the widget's pickup counter */
+    UFUNCTION(BlueprintImplementableEvent, Category = "UI")
+    void UpdatePickups(int32 Amount);
 };

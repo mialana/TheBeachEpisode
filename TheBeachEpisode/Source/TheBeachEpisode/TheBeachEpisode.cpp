@@ -3,6 +3,6 @@
 #include "TheBeachEpisode.h"
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, TheBeachEpisode, "TheBeachEpisode" );
+IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, TheBeachEpisode, "TheBeachEpisode");
 
 DEFINE_LOG_CATEGORY(LogTheBeachEpisode)

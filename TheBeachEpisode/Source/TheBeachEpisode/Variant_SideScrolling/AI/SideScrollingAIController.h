@@ -12,16 +12,16 @@ class UStateTreeAIComponent;
  *  A basic AI Controller capable of running StateTree
  */
 UCLASS(abstract)
+
 class ASideScrollingAIController : public AAIController
 {
-	GENERATED_BODY()
-	
-	/** StateTree Component */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI", meta = (AllowPrivateAccess = "true"))
-	UStateTreeAIComponent* StateTreeAI;
+    GENERATED_BODY()
+
+    /** StateTree Component */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI", meta = (AllowPrivateAccess = "true"))
+    UStateTreeAIComponent* StateTreeAI;
 
 public:
-
-	/** Constructor */
-	ASideScrollingAIController();
+    /** Constructor */
+    ASideScrollingAIController();
 };

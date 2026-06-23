@@ -13,26 +13,25 @@ class USphereComponent;
  *  Increments a counter on the GameMode
  */
 UCLASS(abstract)
+
 class ASideScrollingPickup : public AActor
 {
-	GENERATED_BODY()
-	
-	/** Pickup bounding sphere */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category ="Components", meta = (AllowPrivateAccess = "true"))
-	USphereComponent* Sphere;
+    GENERATED_BODY()
+
+    /** Pickup bounding sphere */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    USphereComponent* Sphere;
 
 public:
-
-	/** Constructor */
-	ASideScrollingPickup();
+    /** Constructor */
+    ASideScrollingPickup();
 
 protected:
+    /** Handles pickup collision */
+    UFUNCTION()
+    void BeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
-	/** Handles pickup collision */
-	UFUNCTION()
-	void BeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
-
-	/** Passes control to BP to play effects on pickup */
-	UFUNCTION(BlueprintImplementableEvent, Category="Pickup", meta = (DisplayName = "On Picked Up"))
-	void BP_OnPickedUp();
+    /** Passes control to BP to play effects on pickup */
+    UFUNCTION(BlueprintImplementableEvent, Category = "Pickup", meta = (DisplayName = "On Picked Up"))
+    void BP_OnPickedUp();
 };

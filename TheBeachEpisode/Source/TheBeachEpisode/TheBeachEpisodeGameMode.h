@@ -10,15 +10,12 @@
  *  Simple GameMode for a third person game
  */
 UCLASS(abstract)
+
 class ATheBeachEpisodeGameMode : public AGameModeBase
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	
-	/** Constructor */
-	ATheBeachEpisodeGameMode();
+    /** Constructor */
+    ATheBeachEpisodeGameMode();
 };
-
-
-

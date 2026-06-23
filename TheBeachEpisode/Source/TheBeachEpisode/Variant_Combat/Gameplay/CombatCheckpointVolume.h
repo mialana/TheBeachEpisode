@@ -8,22 +8,22 @@
 #include "CombatCheckpointVolume.generated.h"
 
 UCLASS(abstract)
+
 class ACombatCheckpointVolume : public AActor
 {
-	GENERATED_BODY()
-	
-	/** Collision box volume */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
-	UBoxComponent* Box;
+    GENERATED_BODY()
 
-public:	
-	
-	/** Constructor */
-	ACombatCheckpointVolume();
+    /** Collision box volume */
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Components, meta = (AllowPrivateAccess = "true"))
+    UBoxComponent* Box;
+
+public:
+    /** Constructor */
+    ACombatCheckpointVolume();
 
 protected:
-
-	/** Handles overlaps with the box volume */
-	UFUNCTION()
-	void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    /** Handles overlaps with the box volume */
+    UFUNCTION()
+    void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+                   int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };

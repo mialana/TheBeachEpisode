@@ -11,12 +11,12 @@
  *  Basic EnvQuery Context that returns the first local player
  */
 UCLASS()
+
 class UEnvQueryContext_Player : public UEnvQueryContext
 {
-	GENERATED_BODY()
-	
-public:
+    GENERATED_BODY()
 
-	/** Provides the context locations or actors for this EnvQuery */
-	virtual void ProvideContext(FEnvQueryInstance& QueryInstance, FEnvQueryContextData& ContextData) const override;
+public:
+    /** Provides the context locations or actors for this EnvQuery */
+    virtual void ProvideContext(FEnvQueryInstance& QueryInstance, FEnvQueryContextData& ContextData) const override;
 };

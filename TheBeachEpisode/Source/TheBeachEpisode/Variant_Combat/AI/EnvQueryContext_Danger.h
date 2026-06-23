@@ -11,13 +11,12 @@
  *  Returns the enemy character's last known danger location
  */
 UCLASS()
+
 class THEBEACHEPISODE_API UEnvQueryContext_Danger : public UEnvQueryContext
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
 public:
-
-	/** Provides the context locations or actors for this EnvQuery */
-	virtual void ProvideContext(FEnvQueryInstance& QueryInstance, FEnvQueryContextData& ContextData) const override;
-
+    /** Provides the context locations or actors for this EnvQuery */
+    virtual void ProvideContext(FEnvQueryInstance& QueryInstance, FEnvQueryContextData& ContextData) const override;
 };
