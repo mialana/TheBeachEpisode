@@ -1,2 +1,5 @@
 # Extra system files
 desktop.ini
+
+# Blender backup file
+*.blend1
