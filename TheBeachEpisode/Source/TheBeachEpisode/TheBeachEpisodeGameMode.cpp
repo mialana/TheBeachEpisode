@@ -2,7 +2,4 @@
 
 #include "TheBeachEpisodeGameMode.h"
 
-ATheBeachEpisodeGameMode::ATheBeachEpisodeGameMode()
-{
-    // stub
-}
+ATheBeachEpisodeGameMode::ATheBeachEpisodeGameMode() {}

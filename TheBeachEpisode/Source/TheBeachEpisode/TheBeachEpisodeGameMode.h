@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+
+#include "TheBeachEpisodeGameModeInterface.h"
 #include "TheBeachEpisodeGameMode.generated.h"
 
 /**
@@ -11,7 +13,7 @@
  */
 UCLASS(abstract)
 
-class ATheBeachEpisodeGameMode : public AGameModeBase
+class ATheBeachEpisodeGameMode : public AGameModeBase, public ITheBeachEpisodeGameModeInterface
 {
     GENERATED_BODY()
 
