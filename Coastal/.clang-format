@@ -73,7 +73,7 @@ AllowShortCaseLabelsOnASingleLine: true
 AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: Empty
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: false
 AlwaysBreakAfterDefinitionReturnType: None
@@ -134,7 +134,7 @@ IndentPPDirectives: None
 IndentRequiresClause: true
 IndentWidth: 4
 IndentWrappedFunctionNames: false
-InsertBraces: false
+InsertBraces: true
 InsertNewlineAtEOF: true
 InsertTrailingCommas: None
 IntegerLiteralSeparator:
@@ -179,7 +179,7 @@ PPIndentWidth: -1
 QualifierAlignment: Leave
 ReferenceAlignment: Pointer
 ReflowComments: false
-RemoveBracesLLVM: true
+RemoveBracesLLVM: false
 RemoveParentheses: MultipleParentheses
 RemoveSemicolon: false
 RequiresClausePosition: OwnLine

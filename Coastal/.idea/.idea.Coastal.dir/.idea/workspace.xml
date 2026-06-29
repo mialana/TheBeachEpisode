@@ -7,17 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06af67c8-8ca5-4613-8a18-674e9e5ec245" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal.dir/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coastal/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="06af67c8-8ca5-4613-8a18-674e9e5ec245" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +140,7 @@
       <workItem from="1782463276611" duration="241000" />
       <workItem from="1782463604403" duration="897000" />
       <workItem from="1782466616411" duration="238000" />
-      <workItem from="1782466880409" duration="42000" />
+      <workItem from="1782466880409" duration="337000" />
     </task>
     <servers />
   </component>
