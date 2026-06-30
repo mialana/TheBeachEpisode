@@ -71,7 +71,10 @@ FSavedMovePtr UCoastalCharacterMovementComponent::FNetworkPredictionData_Client_
     return FSavedMovePtr(new FSavedMove_Coastal());
 }
 
-UCoastalCharacterMovementComponent::UCoastalCharacterMovementComponent() {}
+UCoastalCharacterMovementComponent::UCoastalCharacterMovementComponent()
+{
+    NavAgentProps.bCanCrouch = true;
+}
 
 FNetworkPredictionData_Client* UCoastalCharacterMovementComponent::GetPredictionData_Client() const
 {
@@ -123,4 +126,9 @@ void UCoastalCharacterMovementComponent::SkatePressed()
 void UCoastalCharacterMovementComponent::SkateReleased()
 {
     Safe_bWantsToSkate = false;
+}
+
+void UCoastalCharacterMovementComponent::CrouchPressed()
+{
+    bWantsToCrouch = !bWantsToCrouch;
 }

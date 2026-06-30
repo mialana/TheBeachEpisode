@@ -86,6 +86,11 @@ public:
     virtual void DoJumpEnd();
 
 public:
+    FORCEINLINE class UCoastalCharacterMovementComponent* GetCoastalCharacterMovementComponent() const
+    {
+        return CoastalCharacterMovementComponent;
+    }
+
     /** Returns CameraBoom subobject **/
     FORCEINLINE class USpringArmComponent* GetCameraBoom() const
     {
@@ -96,5 +101,10 @@ public:
     FORCEINLINE class UCameraComponent* GetFollowCamera() const
     {
         return FollowCamera;
+    }
+
+    FORCEINLINE class USkeletalMeshComponent* GetEquipmentMesh() const
+    {
+        return EquipmentMesh;
     }
 };

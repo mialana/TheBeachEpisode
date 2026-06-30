@@ -59,4 +59,7 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = CoastalCharacterMovementComponent)
     void SkateReleased();
+
+    UFUNCTION(BlueprintCallable, Category = CoastalCharacterMovementComponent)
+    void CrouchPressed();
 };
